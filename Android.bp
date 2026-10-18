@@ -1,6 +1,6 @@
 //
 // Motorola apps for kyoto from stock T2RK33.146-14-1: FM Radio, Moto Audio, per-app volume,
-// recorder, aptX, Gametime, screenshot editor, Time & Weather, live wallpaper and Face
+// aptX, Gametime, screenshot editor, Time & Weather, live wallpaper and Face
 // Unlock. Presigned with Motorola's keys; library checks are relaxed because several optional
 // Moto libraries do not exist on this ROM.
 //
@@ -71,17 +71,6 @@ android_app_import {
 android_app_import {
     name: "AudioFx",
     apk: "proprietary/product/app/AudioFx/AudioFx.apk",
-    presigned: true,
-    product_specific: true,
-    dex_preopt: {
-        enabled: false,
-    },
-    enforce_uses_libs: false,
-}
-
-android_app_import {
-    name: "AudioRecorder",
-    apk: "proprietary/product/app/AudioRecorder/AudioRecorder.apk",
     presigned: true,
     product_specific: true,
     dex_preopt: {

@@ -15,7 +15,6 @@ PRODUCT_PACKAGES += \
     MotoFaceUnlockArcSoft \
     MotoScreenshotEditor \
     AudioFx \
-    AudioRecorder \
     TimeWeather \
     FMRadioService \
     MotoBtAptxMode \
