@@ -1,0 +1,174 @@
+//
+// Motorola apps for kyoto from stock T2RK33.146-14-1: FM Radio, Moto Audio, per-app volume,
+// recorder, aptX, Gametime, Spaces, screenshot editor, Time & Weather, live wallpaper and Face
+// Unlock. Presigned with Motorola's keys; library checks are relaxed because several optional
+// Moto libraries do not exist on this ROM.
+//
+
+soong_namespace {
+}
+
+android_app_import {
+    name: "FMPlayer",
+    apk: "proprietary/product/priv-app/FMPlayer/FMPlayer.apk",
+    presigned: true,
+    privileged: true,
+    product_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    enforce_uses_libs: false,
+}
+
+android_app_import {
+    name: "MotoMultiVolume",
+    apk: "proprietary/product/priv-app/MotoMultiVolume/MotoMultiVolume.apk",
+    presigned: true,
+    privileged: true,
+    product_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    enforce_uses_libs: false,
+}
+
+android_app_import {
+    name: "GameMode",
+    apk: "proprietary/product/priv-app/GameMode/GameMode.apk",
+    presigned: true,
+    privileged: true,
+    product_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    enforce_uses_libs: false,
+}
+
+android_app_import {
+    name: "MotoFaceUnlockArcSoft",
+    apk: "proprietary/product/priv-app/MotoFaceUnlockArcSoft/MotoFaceUnlockArcSoft.apk",
+    presigned: true,
+    privileged: true,
+    product_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    enforce_uses_libs: false,
+}
+
+android_app_import {
+    name: "MotoScreenshotEditor",
+    apk: "proprietary/product/priv-app/MotoScreenshotEditor/MotoScreenshotEditor.apk",
+    presigned: true,
+    privileged: true,
+    product_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    enforce_uses_libs: false,
+}
+
+android_app_import {
+    name: "MotoSpaces",
+    apk: "proprietary/product/priv-app/MotoSpaces/MotoSpaces.apk",
+    presigned: true,
+    privileged: true,
+    product_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    enforce_uses_libs: false,
+}
+
+android_app_import {
+    name: "AudioFx",
+    apk: "proprietary/product/app/AudioFx/AudioFx.apk",
+    presigned: true,
+    product_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    enforce_uses_libs: false,
+}
+
+android_app_import {
+    name: "AudioRecorder",
+    apk: "proprietary/product/app/AudioRecorder/AudioRecorder.apk",
+    presigned: true,
+    product_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    enforce_uses_libs: false,
+}
+
+android_app_import {
+    name: "TimeWeather",
+    apk: "proprietary/product/app/TimeWeather/TimeWeather.apk",
+    presigned: true,
+    product_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    enforce_uses_libs: false,
+}
+
+android_app_import {
+    name: "FMRadioService",
+    apk: "proprietary/system_ext/priv-app/FMRadioService/FMRadioService.apk",
+    presigned: true,
+    privileged: true,
+    system_ext_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    enforce_uses_libs: false,
+}
+
+android_app_import {
+    name: "MotoBtAptxMode",
+    apk: "proprietary/system_ext/priv-app/MotoBtAptxMode/MotoBtAptxMode.apk",
+    presigned: true,
+    privileged: true,
+    system_ext_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    enforce_uses_libs: false,
+}
+
+android_app_import {
+    name: "MotoLiveWallpaper3",
+    apk: "proprietary/system_ext/priv-app/MotoLiveWallpaper3/MotoLiveWallpaper3.apk",
+    presigned: true,
+    privileged: true,
+    system_ext_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    enforce_uses_libs: false,
+}
+
+dex_import {
+    name: "moto-checkin",
+    jars: ["proprietary/framework/moto-checkin.jar"],
+}
+
+dex_import {
+    name: "mmiequalizer",
+    jars: ["proprietary/framework/mmiequalizer.jar"],
+}
+
+dex_import {
+    name: "motoaudioeffectsdk",
+    jars: ["proprietary/framework/motoaudioeffectsdk.jar"],
+}
+
+// Motorola FMRadioService declares uses-library qcom.fmradio but uses none of it.
+java_library {
+    name: "qcom.fmradio",
+    srcs: ["stubs/qcom.fmradio/src/**/*.java"],
+    installable: true,
+    system_ext_specific: true,
+    sdk_version: "current",
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Stub for Motorola FMRadioService's uses-library; the service itself uses libfmxjni + /dev/fm. -->
+<permissions>
+    <library name="qcom.fmradio" file="/system_ext/framework/qcom.fmradio.jar" />
+</permissions>
