@@ -14,7 +14,6 @@ PRODUCT_PACKAGES += \
     GameMode \
     MotoFaceUnlockArcSoft \
     MotoScreenshotEditor \
-    MotoSpaces \
     AudioFx \
     AudioRecorder \
     TimeWeather \
